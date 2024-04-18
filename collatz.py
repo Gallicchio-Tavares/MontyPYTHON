@@ -5,7 +5,10 @@ def collatz(number):
   else:
     print(3 * number + 1)
     return 3 * number + 1
-  
-num = int(input("Insira um número: "))
-while num != 1:
-  num = collatz(num)
+
+try:
+  num = int(input("Insira um número: "))
+  while num != 1:
+    num = collatz(num)
+except ValueError:
+  print("Por favor, insira um número inteiro")
